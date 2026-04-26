@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DefinedType xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0b1b73e3-f72e-4049-a065-db6ff1c2d591">
+  <producedTypes>
+    <containerType typeId="553606a5-4f88-4fad-b71d-1ce14d952ec1" valueTypeId="8cf35583-1dad-49b6-aa00-b35931e1d347"/>
+  </producedTypes>
+  <name>ДополнительныеОтчетыИОбработкиОбъектНазначения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дополнительные отчеты и обработки объект назначения</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>10</length>
+    </stringQualifiers>
+  </type>
+</mdclass:DefinedType>
