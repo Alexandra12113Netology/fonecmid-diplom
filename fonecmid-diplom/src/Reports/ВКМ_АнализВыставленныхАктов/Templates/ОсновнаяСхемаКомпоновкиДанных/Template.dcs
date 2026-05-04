@@ -57,10 +57,10 @@
 ОБЪЕДИНИТЬ ВСЕ
 
 ВЫБРАТЬ
-	ВКМ_ВыставленныеКОплатеРаботыОбороты.Договор.Владелец,
-	ВКМ_ВыставленныеКОплатеРаботыОбороты.Договор,
-	0,
-	ВКМ_ВыставленныеКОплатеРаботыОбороты.СуммаКОплатеРасход
+	ВКМ_ВыставленныеКОплатеРаботыОбороты.Договор.Владелец КАК Клиент,
+	ВКМ_ВыставленныеКОплатеРаботыОбороты.Договор КАК Договор,
+	0 КАК СуммаНачислено,
+	ВКМ_ВыставленныеКОплатеРаботыОбороты.СуммаКОплатеОборот КАК СуммаКУплате
 ИЗ
 	РегистрНакопления.ВКМ_ВыставленныеКОплатеРаботы.Обороты(&amp;НачалоПериода, &amp;КонецПериода,,) КАК
 		ВКМ_ВыставленныеКОплатеРаботыОбороты</query>
@@ -141,7 +141,7 @@
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Анализ выставленных счетов</v8:content>
+				<v8:content>Анализ выставленных актов</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -158,16 +158,6 @@
 			</dcsset:selection>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Период</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardPeriod">
-						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-						<v8:startDate>2025-01-01T00:00:00</v8:startDate>
-						<v8:endDate>2025-01-31T23:59:59</v8:endDate>
-					</dcscor:value>
-					<dcsset:userSettingID>57d93da8-c6ca-4dc7-9b90-a2a59cb65c08</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>НачалоПериода</dcscor:parameter>
 					<dcscor:value xsi:type="v8:StandardBeginningDate">
 						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
@@ -175,12 +165,20 @@
 					</dcscor:value>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>КонецПериода</dcscor:parameter>
 					<dcscor:value xsi:type="v8:StandardBeginningDate">
 						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
 						<v8:date>2025-01-31T00:00:00</v8:date>
 					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>2025-01-01T00:00:00</v8:startDate>
+						<v8:endDate>2026-05-04T23:59:59</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>2bf1a4e1-d8d7-401e-b6b7-b3c2c6b2ca84</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:conditionalAppearance>
